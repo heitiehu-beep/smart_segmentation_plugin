@@ -8,11 +8,12 @@
     "url": "https://github.com/saberlights"
   },
   "license": "GPL-v3.0-or-later",
-  "host_application": {
-    "min_version": "0.11.0"
-  },
   "homepage_url": "https://github.com/saberlights/smart_segmentation_plugin",
   "repository_url": "https://github.com/saberlights/smart_segmentation_plugin",
+  "host_application": {
+    "name": "MaiBot",
+    "min_version": "0.11.0"
+  },
   "keywords": [
     "segmentation",
     "text-processing",
@@ -44,10 +45,30 @@
       "可配置切分风格",
       "使用小模型快速处理"
     ],
-    "requirements": [
-      "需要配置 utils_small 模型",
-      "建议禁用内置 response_splitter"
-    ]
+    "dependencies": {
+      "python": [],
+      "plugins": [],
+      "external_api": []
+    },
+    "config": {
+      "config_file": "config.toml",
+      "has_default_config": true
+    }
   },
-  "id": "claude.smart_segmentation_plugin"
+  "permissions": [
+    "message.intercept",
+    "llm.call"
+  ],
+  "changelog": {
+    "1.0.0": {
+      "date": "2025-11-27",
+      "changes": [
+        "初始版本发布",
+        "实现智能文本分段功能",
+        "支持多种分段风格配置",
+        "集成 LLM 语义分析"
+      ]
+    }
+  },
+  "id": "saberlights.smart_segmentation_plugin"
 }
