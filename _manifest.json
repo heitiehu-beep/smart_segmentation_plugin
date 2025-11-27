@@ -1,0 +1,53 @@
+{
+  "manifest_version": 1,
+  "name": "智能分段插件 (Smart Segmentation Plugin)",
+  "version": "1.0.0",
+  "description": "使用 LLM 智能切分回复文本，在语义自然的地方切分，保持原文内容不变，让回复更加灵活自然",
+  "author": {
+    "name": "久远",
+    "url": "https://github.com/saberlights/smart_segmentation_plugin.git"
+  },
+  "license": "GPL-v3.0-or-later",
+  "host_application": {
+    "min_version": "011.0"
+  },
+  "homepage_url": "https://github.com/MaiM-with-u/maibot",
+  "repository_url": "https://github.com/MaiM-with-u/maibot",
+  "keywords": [
+    "segmentation",
+    "text-processing",
+    "natural-language",
+    "smart-split",
+    "llm"
+  ],
+  "categories": [
+    "Text Processing",
+    "AI Enhancement"
+  ],
+  "default_locale": "zh-CN",
+  "plugin_info": {
+    "is_built_in": false,
+    "plugin_type": "enhancement",
+    "components": [
+      {
+        "type": "event_handler",
+        "name": "smart_segmentation_handler",
+        "description": "使用LLM智能切分回复文本",
+        "event_type": "after_llm",
+        "intercept_message": true
+      }
+    ],
+    "features": [
+      "智能文本切分",
+      "保持原文内容不变",
+      "语义自然停顿",
+      "可配置切分风格",
+      "使用小模型快速处理"
+    ],
+    "requirements": [
+      "需要配置 utils_small 模型",
+      "建议禁用内置 response_splitter"
+    ]
+  },
+  "id": "claude.smart_segmentation_plugin"
+}
